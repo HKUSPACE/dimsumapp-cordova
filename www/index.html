@@ -44,7 +44,7 @@
 </nav>
 <div class="container">
 	  <button class="btn btn-default" id="loadBtn">Load Dimsums</button>
-<div class="panel panel-default">
+<div class="panel panel-default list">
   <!-- Default panel contents -->
   <div class="panel-heading">點心列表</div>
   <div class="panel-body">
@@ -61,6 +61,28 @@
 	  </tr>
   </table>
 </div>
+	<div class="panel panel-default add-dimsum">
+		<form id="addDimsumForm">
+			<div class="field">
+				<label for="name">Name</label>
+				<input name="data[Dimsum][name]" id="name" />
+			</div>
+			<div class="field">
+				<label for="stock">Stock</label>
+				<input name="data[Dimsum][stock]" id="stock" />
+			</div>
+			<div class="field">
+				<label for="typeId">Type</label>
+				<input name="data[Dimsum][type_id]" id="typeId" type="number"/>
+			</div>
+			<div class="field">
+				<label for="photo">Photo</label>
+				<a href="#" id="addDimsumPhotoBtn" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">Add Photo</a>
+				<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+				<input type="button" id="btnSubmit" value="Submit" onclick="uploadPhoto();">
+			</div>
+		</form>
+	</div>
 	 </div> 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
